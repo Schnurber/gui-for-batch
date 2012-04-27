@@ -10,12 +10,11 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
-import java.io.IOException;
 
 import javax.swing.JFileChooser;
 
 public class ConverterFrame extends Frame{
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 11L;
 	protected String os;
 	protected String[] files;
 	protected Label fileLabel;
@@ -35,7 +34,7 @@ public class ConverterFrame extends Frame{
 		});
 		this.setLayout(null);
 		//GUI-Elemente
-		Label l=new Label("Welcome to the batch-GUI!\n\nI use following configurations:");
+		Label l=new Label("Welcome to the batch-GUI (v.1.1)!\n\nI use following configurations:");
 		int xpos=50;
 		int ypos=50;
 		l.setBounds(xpos, ypos, this.getWidth()-xpos*2, 50);
@@ -140,7 +139,6 @@ public class ConverterFrame extends Frame{
 			proc.waitFor();
 			for (String i  : command) System.out.println(i);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			out(new String[]{e.getMessage()});
 		}
