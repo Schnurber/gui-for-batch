@@ -136,6 +136,9 @@ public class ConverterFrame extends Frame{
 		try {
 			out(command);
 			Process proc = Runtime.getRuntime().exec(command);
+			proc.getErrorStream().close();
+			proc.getInputStream().close();
+			proc.getOutputStream().close();
 			proc.waitFor();
 			for (String i  : command) System.out.println(i);
 		} catch (Exception e) {
