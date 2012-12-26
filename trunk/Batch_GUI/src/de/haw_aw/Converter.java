@@ -9,7 +9,7 @@ public class Converter {
 	/**
 	 * Batch-converter
 	 * @Author Dieter Meiller 2011
-	 * For Eclipse: Export->Runnable JAR-File
+	 * For Eclipse: Export->Runnable JAR-File...
 	 */
 	public static void main(String[] args) {
 		System.setProperty("apple.laf.useScreenMenuBar", "true");
